@@ -1,0 +1,17 @@
+{
+  "name": "litecam",
+  "version": "1.0.0",
+  "description": "simple webcam app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Reading",
+  "license": "ISC",
+  "dependencies": {
+    "user-home": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2-beta.2"
+  }
+}

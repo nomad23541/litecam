@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+body {
+    margin: 0 auto;
+    background-color: black;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    margin: 10px;
+}
+
+#settings-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    color: white;
+}
+
+#filter {
+    display: inline-block;
+}
+
+#settings-page #settings-exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: transparent;
+    border: none;
+}
+
+#settings-exit img {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+#settings-exit img:hover {
+    cursor: pointer;
+}
+
+#flash {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#v {
+    width: auto;
+    height: 100%;
+}
+
+#c {
+    display: none;
+}
+
+/** video filters */
+
+.none {
+    filter: none;
+}
+
+.grayscale {
+    filter: grayscale(1)
+}
+
+.sepia {
+    filter: sepia(1)
+}
+
+.invert {
+    filter: invert(1)
+}
+
+.mirrored {
+    transform: rotateY(180deg);
+}
+
+*:focus {
+    outline: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.container .toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    color: white;
+    height: auto;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.toolbar #capture, #capture:before {
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.toolbar #capture {
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    border: none;
+    background-color: white;
+
+    transition: 0.2s ease-out;
+}
+
+.toolbar #capture:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    padding: 4px;
+    border: 4px solid white;
+    top: -8px;
+    left: -8px;
+}
+
+.toolbar #capture:active {
+    background-color: transparent;
+}
+
+.toolbar #capture:hover {
+    cursor: pointer;
+}
+
+.toolbar #lastphoto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 90px;
+    height: 60px;
+
+    background-color: black;
+    align-self: left;
+    justify-self: center;
+    margin-left: 15px;
+    border: 1px solid transparent;
+
+    transition: 0.2s ease-out;
+}
+
+.toolbar #lastphoto:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#lastphoto img {
+    width: 100%;
+    height: 100%;
+}
+
+.toolbar #settings-open {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+
+    background-color: transparent;
+    border: none;
+}
+
+.toolbar #settings-open img {
+    width: 40px;
+    height: 40px;
+    fill: red;
+    transition: 0.2s ease-out;
+}
+
+#settings-open img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

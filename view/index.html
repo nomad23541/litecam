@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>litecam 2</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- hidden by default -->
+            <div id="settings-page">
+                <button id="settings-exit"><img src="../resources/cancel-button.svg"></button>
+                <div class="wrapper">
+                    <h1>Settings</h1>
+                    <ul>
+                        <li>
+                            <span>Filters: </span>
+                            <select id="filters">
+                                <option value="none">none</option>
+                                <option value="grayscale">grayscale</option>
+                                <option value="sepia">sepia</option>
+                                <option value="invert">invert</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>Mirrored: </span>
+                            <input id="mirrored" class="checkbox" type="checkbox" checked></input>
+                        </li>
+                    </ul>
+                </div>        
+            </div>
+
+            <div id="flash"></div>
+            <video id="v" class="mirrored" autoplay></video>
+            <div id="toolbar" class="toolbar">
+                <div id="lastphoto"><img src=""></div>
+                <button id="capture"></button>
+                <button id="settings-open"><img src="../resources/settings.svg"></button>
+            </div>
+        </div>
+
+        <!-- hidden -->
+        <canvas id="c"></canvas>
+
+        <script type="text/javascript" src="view.js"></script>
+    </body>
+</html>
