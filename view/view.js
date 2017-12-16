@@ -7,6 +7,10 @@ const camRollDir = userHome + '/Pictures/Camera Roll/'
 var video = document.getElementById('v')
 var canvas = document.getElementById('c')
 
+// create the /Pictures/Camera Roll/ directory if it doesn't exist
+if(!fs.existsSync(camRollDir))
+    fs.mkdirSync(camRollDir)
+
 navigator.mediaDevices.getUserMedia({
     video: {
         optional: [
